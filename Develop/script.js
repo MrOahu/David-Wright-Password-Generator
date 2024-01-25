@@ -13,7 +13,7 @@ function writePassword() {
 var lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ]
 var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ]
 var numberArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0" ]
-var specialArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")" ]
+var specialArray = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+" ]
 var characterPool = []
 // get user input for how they want the password using prompt and confirms
 // create character pool that holds characters that user says yes to
@@ -26,6 +26,7 @@ var confirmUppercase= window.confirm("Would you like uppercase letters in your p
 var confirmNumbers= window.confirm("Would you like numbers in your password?")
 var confirmSpecial= window.confirm("Would you like special characters in your password?")
 
+//conditional statements
 if(confirmLowercase === true){
   characterPool = characterPool.concat(lowercaseArray)
 }
@@ -41,6 +42,8 @@ if(confirmNumbers === true){
 if(confirmSpecial === true){
   characterPool = characterPool.concat(specialArray)
 }
+
+console.log()
 
   return "This is a new Password"
 }
